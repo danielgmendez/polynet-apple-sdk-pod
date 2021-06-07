@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-    s.name              = 'PolyNet'
+    s.name              = 'PolyNetSDK'
     s.version           = '4.42.1201'
     s.swift_version = '5.0'
     s.summary           = 'PolyNet SDK for iOS'
