@@ -1,8 +1,8 @@
 Pod::Spec.new do |s|
     s.name              = 'PolyNetSDK'
-    s.version           = '5.0.0'
+    s.version           = '4.42.1201'
     s.swift_version     = '5.1'
-    s.summary           = 'PolyNet SDK for iOS and tvOS'
+    s.summary           = 'PolyNet SDK for iOS'
     s.homepage          = 'https://system73.com/'
     s.author            = { 'Name' => 'support@system73.com' }
     s.license           = { :type => 'Copyright (c) 2019, System73 (R)', :text => <<-LICENSE
@@ -19,15 +19,13 @@ Pod::Spec.new do |s|
                               packaged license.
                             LICENSE
                           }
-    # s.platform          = :ios
-    s.source            = { :http => 'https://artifacts.s73cloud.com/repository/maven-s73-releases/s73-polynet-plat/polynet-apple-sdk/5.0.0/polynet-apple-sdk-5.0.0.zip' }
+    s.platform          = :ios
+    s.source            = { :http => 'https://artifacts.s73cloud.com/repository/maven-s73-releases/s73-polynet-plat/polynet-ios-sdk/4.42.1201/polynet-ios-sdk-4.42.1201.zip' }
+    s.source_files      = "PolyNetSDK-iOS-4.42.1201/PolyNetSDK.framework/Headers/"
     # s.dependency 'Starscream', '~> 3.0.6'
     # s.dependency 'SwiftProtobuf', '~> 1.3.1'
     s.ios.deployment_target = '9.0'
-    s.tvos.deployment_target = '9.0'
-    s.vendored_frameworks = 'PolyNetSDK.xcframework'
-    s.ios.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
-    s.ios.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
-    s.tvos.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=appletvsimulator*]' => 'arm64' }
-    s.tvos.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=appletvsimulator*]' => 'arm64' }
+    s.ios.vendored_frameworks = 'PolyNetSDK-iOS-4.42.1201/PolyNetSDK.framework'
+    s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+    s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
 end
